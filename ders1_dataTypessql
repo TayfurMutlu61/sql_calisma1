@@ -1,0 +1,22 @@
+--data types
+
+--bit 1,0(boolean gibi)
+
+--tinyint(int gibi0-255)
+--smallint(-32,768-32767 araliginda)
+
+--int  ...
+--bigint ...
+
+
+--decimal
+--money(para birimleri icin)
+--numeric(field olustururken kusuratlarda)
+--float
+
+
+--char(' <> & .. bu tarz karakterler tutlabilir)
+
+--varchar(max 8000 karakter alabilir)
+--nvarchar(girilecek max deger belli olmasi lazim)
+--text(max 2gb lik metinler tutulabilir)

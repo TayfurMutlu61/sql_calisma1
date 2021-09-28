@@ -1,0 +1,15 @@
+--select * from employees; -> bu sekilde bir tablomuzu goruruz
+--select employe_id,first_name,last_name from employees; -> bu sekilde ise sectigimiz stunlar i gosterir sadece
+--eger herhangi bir stuna gore siralama yapmak istiyorsak asagidaki gibi order by kullanmaliyiz
+
+select* from employees
+order by last_name;-->last_name e gore siralamis olduk. (default hali asc dir normal siralama yapar yazsak da yazmasak da)
+--eger tersten siralamak istersek sonuna desc yazmamiz yeterlidir
+select* from employees
+order by last_name desc ;
+--illaki hangi stunu gore siralayacaksak onun ismmini yazmaya gerek yok satir sirasini da yazsak ayni islemi yapar
+select* from employees
+order by 3;
+
+
+

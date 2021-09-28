@@ -1,0 +1,16 @@
+--MIN & MAX
+--Tablomdaki en buyuk yada en kucuk degeri gormek icin kullaniriz
+
+
+select * from employees;
+
+--max
+select Max(salary) from employees;--tablodaki en yuksek maasi
+--Min
+select Min(salary) from employees;--tablodaki en dusuk maasi
+
+--bir tabloya yada bir veriye isim verme
+--Alias
+select Min(salary) as MinimumSalary  from employees;--artik sutunumun ismi minimumsalary oldu
+--eger verdigimiz ismi arasinda bosluk birakarak yazarsak hata verir ancak koseli paranteze alirsak bu hata kalkar
+--select Min(salary) AS [Minimum Salary] from employees;

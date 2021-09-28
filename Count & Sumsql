@@ -1,0 +1,11 @@
+--COUNT & SUM
+--kullanimi min ve max ile aynidir
+select Count(*) from employees;--bu toplam kayit sayisini verir(107)
+--where kosulu ile birlikte kullanimi
+select Count(*) from employees
+where salary=10000;--salary si 10000 olanlarin sayisini getirir(4)
+
+--Sum
+--toplam alan bir islem yapar
+select Sum(salary) as TotalSalary from employees
+where manager_id=148;--manager_id si 148 olanlarin maaslari toplamini bulduk

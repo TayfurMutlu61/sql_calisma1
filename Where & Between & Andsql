@@ -1,0 +1,52 @@
+select * from employees;
+
+--distinct
+select distinct first_name from employees; --distinct ile tekrarli olanlari sileriz 
+
+--count
+select COUNT(*) from employees;--bana toplam kayit sayisini verir
+select COUNT(distinct first_name) from employees;--bu sekilde de sadece tekrarlilari cikartarak toplam kayit sayisini verir
+
+
+--where(kosul)
+select * from employees
+where salary='9000';--salary  si 9000 olanlari getirdi sadece
+
+
+--and
+--salary yi getircem ve aralarina sinir koyacam aralarinda 3000-4000 arasinda salarysi olanlari getirecem
+select * from employees
+where salary>='3000' and salary<='4000'
+order by salary;--order by ile de kucukten buyuge siraladik
+
+--between(rtek bir kriter vererek aralik bulma)
+
+select * from employees
+where salary BETWEEN 2000 AND 3000--2000 ve 3000 dahil olur 
+order by salary;
+
+
+--AND & OR & NOT--
+select * from employees;
+
+--salary si 10000 den fazla olanlari ve manager_id si 120 den buyuk olanlari goruntulemek istiyorum
+select * from employees 
+where salary>=10000 and manager_id>=120
+order by salary;--and ornegi
+
+--or
+--manager_id si148 veya 110 olanlari getir
+select * from employees
+where manager_id=148 or manager_id=103;
+
+--not
+--salary si 10000 den az olanlari getirme
+select * from employees
+where not salary<=10000;
+
+--and ve or birlikte kullanimi
+
+select * from employees
+where not salary=10000 and (manager_id=148 or department_id=80);
+
+
