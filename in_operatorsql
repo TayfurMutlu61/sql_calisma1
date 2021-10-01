@@ -1,0 +1,24 @@
+--in operator
+
+select * from employees;
+
+select COUNT(*) from employees
+where job_id='IT_PROG';
+
+select * from employees 
+where job_id='IT_PROG';
+
+--BURAYA kadar gecen derslerde olanlari yaptik simdi ise in ile  iki isi sahip olani getirecfez
+select * from employees 
+where job_id IN('IT_PROG','FI_ACCOUNT') ;--goruldugu gibi iki meslegi birden secmis olduk,birden fazla secim yapilacagi zaman in i kullanabiliriz
+SELECT * FROM employees
+where department_id in(100,60);--department_id nin type number oldugu icin tirnaksiz yazabiliyoruz
+
+SELECT * FROM employees
+where salary in(10000,4800);
+
+SELECT COUNT(*) FROM employees
+where salary in(10000,4800,6000);--ve bunlarin kac kisi oldugunu bulalim, 6 tane oldugunu bize verecektir
+
+    
+

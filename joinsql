@@ -1,0 +1,66 @@
+--join
+select*from employees;
+select*from departments;
+
+--ortak manager_id leri var
+
+SELECT * FROM employees 
+join departments 
+on employees.MANAGER_ID=departments.MANAGER_ID;--join ile iki tablonun ortak elemanlari uzerinden baglama yaptik
+
+SELECT employees.MANAGER_ID, employees.first_name,departments.location_id  FROM employees 
+join  departments 
+on employees.MANAGER_ID=departments.MANAGER_ID;--burada sadece iki tablodan da gormekm istedigim stunlari cagirmis oldum
+
+--  inner join-left join-right join
+--join
+SELECT employees.MANAGER_ID, employees.first_name,departments.location_id  FROM employees 
+join  departments 
+on employees.MANAGER_ID=departments.MANAGER_ID;
+
+--inner join
+SELECT employees.MANAGER_ID, employees.first_name,departments.location_id  FROM employees 
+inner join  departments 
+on employees.MANAGER_ID=departments.MANAGER_ID;
+
+--left join
+SELECT employees.MANAGER_ID, employees.first_name,departments.location_id  FROM employees 
+left join  departments 
+on employees.MANAGER_ID=departments.MANAGER_ID;--manager_id ye gore siralanir yani employees tablosuna gore
+
+--right join
+
+SELECT employees.MANAGER_ID, employees.first_name,departments.location_id  FROM employees 
+right join  departments 
+on employees.MANAGER_ID=departments.MANAGER_ID;--location_id ye gore siralanir yani department tablosuna gore
+
+
+--SELF JOIN--
+
+SELECT * FROM employees 
+join departments 
+on employees.MANAGER_ID=departments.MANAGER_ID;--NORMAL JOIN
+
+SELECT * FROM employees E ,
+departments D
+WHERE E.MANAGER_ID=D.MANAGER_ID;--SELF JOIN YUKARIDAKI ILE AYNI TABLOYU VERIR SADECE SYNTAX I FARKLIDIR
+
+
+SELECT * FROM employees E ,
+departments D,job_history J
+WHERE E.MANAGER_ID=D.MANAGER_ID AND d.department_id=j.department_id ;--BU SEKILDE DE 3 TABLOYU BIRLESTIRMIS OLDUK
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

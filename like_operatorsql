@@ -1,0 +1,42 @@
+ -- = operato
+ select * from employees 
+ where job_id='ST_MAN' ;
+ 
+ --LIKE operator
+ 
+ select * from employees 
+ where job_id LIKE 'S%' ;--'s%' like ile kullandigimiz zaman s ile baslayan tum job_id leri getirecektir bana
+ 
+ select * from employees 
+ where job_id LIKE '%K' ;--'K% ile bitenleri getirir bu sekilde yapildigi zamnada
+ 
+ 
+ select * from employees 
+ where job_id LIKE 'SA%' ;--sa ile baslayanöari da getiri illa tek harf olmasina gerek yoktur
+ 
+  select * from employees 
+ where job_id LIKE '%AN' ;--BITIS ICINDE GECERLIDIR AN ILE BITENLERI BIZE GETIRECEKTIR
+ 
+ 
+  select * from employees 
+ where job_id LIKE '%T_%' ;--Icerisinde herhangi bir yerinde T_ gecenleri bulmak icinde iki tarafina da % isareti koymamiz yeterlidir
+ 
+  select * from employees 
+ where job_id LIKE 'I%G' ;--I ile baslayan G ile bitenleri getirmek icinde bu sekilde kullanimi v ardir
+ 
+  select * from employees 
+ where job_id LIKE 'SA%' ;
+ 
+  select * from employees 
+ where job_id LIKE 'I_%' ;--I ile baslayanlari almak demek yukarida kullandigimiz ile ayni sonucu verir(I%)
+ 
+  select * from employees 
+ where job_id LIKE '_T%' ;--ikinci harfi T olanlkari getirir bana ucuncu harfini filan istersekte o kadar tre koymamiz yeterli olur
+ 
+  select * from employees 
+ where job_id LIKE '___%' ;--uvcuncu harfi _ olanlari bana getirir
+ 
+  select * from employees 
+ where job_id LIKE '%N_' ;--SONDAN ikinci harfi N olanlari bana getirir
+ 
+ 
